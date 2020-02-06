@@ -6,14 +6,11 @@
  */
 int main(void)
 {
-	int x, y, z;
+	int x;
 
-	for (x = 'a' ; x <= 'd' ; x++)
+	for (x = 'a' ; x <= 'z' && x != 'e' && x <= 'q' ; x++)
 		putchar(x);
-	for (y = 'f' ; y <= 'p' ; y++)
-		putchar(y);
-	for (z = 'r' ; z <= 'z' ; z++)
-		putchar(z);
+
 	putchar('\n');
 	return (0);
 }
