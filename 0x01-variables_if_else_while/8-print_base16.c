@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 /**
  * main - Entry point
  *
@@ -7,15 +6,12 @@
  */
 int main(void)
 {
-	int x = 0;
-	int y = 97;
+	int x;
+	int y = 'a';
 
-	while (x <= 9)
-	{
+	for  (x = 48 ; x <= 57 ; x++)
 		putchar(x);
-		x++;
-	}
-	while (y <= 102)
+	while (y <= 'f')
 	{
 		putchar(y);
 		y++;
