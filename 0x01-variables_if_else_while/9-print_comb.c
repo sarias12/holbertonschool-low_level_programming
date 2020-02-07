@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+#define N 10
 /**
  * main - Entry point
  *
@@ -7,18 +7,18 @@
  */
 int main(void)
 {
-	int n;
+	int x = 0;
 
-	for (n = 0 ; n < 10 ; n++)
+	while (x < 10)
 	{
-		putchar(n);
-			if (n < 9)
-			{
-				putchar(44);
-				putchar(32);
-			}
+		putchar(x + '0');
+		if (0 < 9)
+		{	
+			putchar(44);
+			putchar(32);
+		}
+		x++;
 	}
 	putchar('\n');
 	return (0);
-
 }
