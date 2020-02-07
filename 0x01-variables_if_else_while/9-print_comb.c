@@ -1,5 +1,4 @@
 #include <stdio.h>
-#define N 10
 /**
  * main - Entry point
  *
