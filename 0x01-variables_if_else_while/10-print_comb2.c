@@ -19,8 +19,8 @@ int main(void)
 			if (x != 9 || y != 9)
 			{
 				putchar(44);
+				putchar(32);
 			}
-			putchar(32);
 			y++;
 		}
 		x++;
