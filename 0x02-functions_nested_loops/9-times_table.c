@@ -16,18 +16,30 @@ void times_table(void)
 	{
 		for (y = 0 ; y <= 9 ; y++)
 		{
-			d = x * y;
-			if (d > 9)
+			d  = x * y;
+			if (d > 9 && y < 9)
+			{
+				_putchar(d / 10 + '0');
+				_putchar(d % 10 + '0');
+				_putchar(',');
+				_putchar(' ');
+			}
+			else if (d > 9 && y > 8)
 			{
 				_putchar(d / 10 + '0');
 				_putchar(d % 10 + '0');
 			}
-			else
+			else if (x <= 1 && y >= 9)
 			{
 				_putchar(d + '0');
 			}
-			_putchar(',');
-			_putchar(' ');
+			else
+			{
+				_putchar(d + '0');
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+			}
 		}
 		_putchar('\n');
 	}
