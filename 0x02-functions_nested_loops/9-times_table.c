@@ -29,14 +29,9 @@ void times_table(void)
 				_putchar(d / 10 + '0');
 				_putchar(d % 10 + '0');
 			}
-			else if (x <= 1 && y >= 9)
+			else if (d <= 8)
 			{
 				_putchar(d + '0');
-			}
-			else
-			{
-				_putchar(d + '0');
-				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
 			}
