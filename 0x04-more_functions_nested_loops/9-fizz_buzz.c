@@ -1,8 +1,7 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * @size: - description
- *
+ *@x. - variable
  * Return: Always 0 (Success)
  */
 int main(void)
@@ -21,5 +20,5 @@ int main(void)
 			printf("%d ", x);
 	}
 	printf("\n");
-	return(0);
+	return (0);
 }
