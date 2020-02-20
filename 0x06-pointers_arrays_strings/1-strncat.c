@@ -6,6 +6,9 @@
   * @dest: first string
   *
   * @src: second string
+  *
+  * @n: limit
+  *
   * Return: Concatenat
   */
 char *_strncat(char *dest, char *src, int n)
