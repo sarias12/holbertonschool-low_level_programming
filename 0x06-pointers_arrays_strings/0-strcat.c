@@ -6,6 +6,7 @@
   * @dest: first string
   *
   * @src: second string
+  * Return: Concatenat
   */
 char *_strcat(char *dest, char *src)
 {
