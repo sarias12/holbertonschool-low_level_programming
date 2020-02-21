@@ -11,19 +11,23 @@
   */
 char *cap_string(char *tcap)
 {
-	int x;
-	bool a, b, c;
+	int i;
 
-	for (x = 0 ; tcap[x] != '\0' ; x++)
+	for (i = 0 ; tcap[i] != '\0' ; i++)
 	{
-		a = (tcap[x] >= 97 && tcap[x] <= 122);
-		b = (tcap[x - 1] < 65 || tcap[x - 1] > 122);
-		c = (!(tcap[x - 1] > 47 && tcap[x - 1] < 58));
-		if (a && b && c)
-			tcap[x] -= 32;
-		if (tcap[x] == '\t')
-			tcap[x] = ' ';
+		if (tcap[i] > 96 && tcap[i] < 123)
+		{
+			if (tcap[i - 1] == ',' || tcap[i - 1] == ';' || tcap[i - 1] == '.')
+			if (tcap[i - 1] == '\n' || tcap[i - 1] == '(' || tcap[i - 1] == ')')
+			if (tcap[i - 1] == '{' || tcap[i - 1] == '}' || tcap[i - 1] == '\t')
+			if (tcap[i - 1] == ' ' || tcap[i - 1] == '!' || tcap[i - 1] == '?' || tcap[i - 1] == '"')
+				tcap[i] -= 32;
+		}
+
+		else 
+		{
+			tcap[i] -= 0;
+		}	
 	}
-	tcap[x++] = '\0';
 	return (tcap);
 }
