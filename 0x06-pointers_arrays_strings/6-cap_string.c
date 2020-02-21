@@ -4,30 +4,27 @@
 /**
   * *cap_string - function that capitalizes all words of a string..
   *
-  * @tcap: string
+  * @s: string
   *
   *
   * Return: String Upper
   */
-char *cap_string(char *tcap)
+char *cap_string(char *s)
 {
 	int i;
 
-	for (i = 0 ; tcap[i] != '\0' ; i++)
+	for (i = 0 ; s[i] != '\0' ; i++)
 	{
-		if (tcap[i] > 96 && tcap[i] < 123)
+		if (s[i] > 96 && s[i] < 123)
 		{
-			if (tcap[i - 1] == ',' || tcap[i - 1] == ';' || tcap[i - 1] == '.')
-			if (tcap[i - 1] == '\n' || tcap[i - 1] == '(' || tcap[i - 1] == ')')
-			if (tcap[i - 1] == '{' || tcap[i - 1] == '}' || tcap[i - 1] == '\t')
-			if (tcap[i - 1] == ' ' || tcap[i - 1] == '!' || tcap[i - 1] == '?' || tcap[i - 1] == '"')
-				tcap[i] -= 32;
+			if (s[i - 1] == ',' || s[i - 1] == ';' || s[i - 1] == '.')
+			if (s[i - 1] == '\n' || s[i - 1] == '(' || s[i - 1] == ')')
+			if (s[i - 1] == '{' || s[i - 1] == '}' || s[i - 1] == '\t')
+			if (s[i - 1] == ' ' || s[i - 1] == '!' || s[i - 1] == '?')
+			if (s[i - 1] == '"')
+				s[i] -= 32;
 		}
-
-		else 
-		{
-			tcap[i] -= 0;
-		}	
 	}
-	return (tcap);
+
+	return (s);
 }
