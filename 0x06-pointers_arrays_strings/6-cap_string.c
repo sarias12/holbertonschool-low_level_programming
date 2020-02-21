@@ -21,6 +21,8 @@ char *cap_string(char *tcap)
 		c = (!(tcap[x - 1] > 47 && tcap[x - 1] < 58));
 		if (a && b && c)
 			tcap[x] -= 32;
+		if (tcap[x] == '\t')
+			tcap[x] = ' ';
 	}
 	return (tcap);
 }
