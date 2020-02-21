@@ -24,5 +24,6 @@ char *cap_string(char *tcap)
 		if (tcap[x] == '\t')
 			tcap[x] = ' ';
 	}
+	tcap[x++] = '\0';
 	return (tcap);
 }
