@@ -5,19 +5,21 @@
   *
   * @s: array
   *
-  * @c: value for change
+  * @c: value for locate
   *
-  * @n: index
   *
   * Return: Constant byte
   */
-char *_memcpy(char *dest, char *src, unsigned int n)
+char *_strchr(char *s, char c)
 {
-	unsigned int x;
+	int x;
 
-	for (x = 0 ; x < n ; x++)
+	for (x = 0 ; s[x] != '\0' ; x++)
 	{
-		dest[x] = src[x];
+		if (s[x] == c)
+		{
+			return (&s[x]);
+		}
 	}
-	return (dest);
+	return (NULL);
 }
