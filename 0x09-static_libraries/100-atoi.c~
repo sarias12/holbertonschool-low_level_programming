@@ -1,0 +1,21 @@
+nclude <stdio.h>
+  2 #include "holberton.h"
+    3 /**
+	  4  * _isupper - Entry point
+	    5  *
+	      6  * @c: - description
+	        7  *
+		  8  * Return: Always 0 (Success)
+		    9  */
+     10 int _isupper(int c)
+	 11 {
+		  12         if (c >= 65 && c <= 90)
+			   13         {
+				    14                 return (1);
+				     15         }
+		   16         else
+			    17         {
+				     18                 return (0);
+				      19         }
+		    20 }
+		    ~          
