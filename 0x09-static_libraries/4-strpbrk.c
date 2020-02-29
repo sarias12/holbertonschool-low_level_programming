@@ -1,20 +1,17 @@
 #include <stdio.h>
 #include "holberton.h"
 /**
- * _isupper - Entry point
+ * *_strpbrk - Entry point
  *
- * @c: - description
+ * @s: - description
+ *
+ * @accept: - description
  *
  * Return: Always 0 (Success)
  */
-int _isupper(int c)
+char *_strpbrk(char *s, char *accept)
 {
-	if (c >= 65 && c <= 90)
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+	(void) s;
+	(void) accept;
+	return (0);
 }

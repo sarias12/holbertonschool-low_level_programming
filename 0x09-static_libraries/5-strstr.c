@@ -1,20 +1,16 @@
 #include <stdio.h>
 #include "holberton.h"
 /**
- * _isupper - Entry point
+ * *_strtsr - Entry point
  *
- * @c: - description
+ * @haystack: - description
+ * @needle: - description
  *
  * Return: Always 0 (Success)
  */
-int _isupper(int c)
+char *_strstr(char *haystack, char *needle)
 {
-	if (c >= 65 && c <= 90)
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+	(void) haystack;
+	(void) needle;
+	return (0);
 }

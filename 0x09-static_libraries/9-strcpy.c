@@ -1,20 +1,16 @@
 #include <stdio.h>
 #include "holberton.h"
 /**
- * _isupper - Entry point
+ * *_strcpy - Entry point
  *
- * @c: - description
+ * @dest: - description
+ * @src: - description
  *
  * Return: Always 0 (Success)
  */
-int _isupper(int c)
+char *_strcpy(char *dest, char *src)
 {
-	if (c >= 65 && c <= 90)
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+	(void) dest;
+	(void) src;
+	return (0);
 }
