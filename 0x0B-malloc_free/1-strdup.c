@@ -3,9 +3,8 @@
 #include "holberton.h"
 /**
  * *_strdup - Entry point
- * strlen - function
- * @s1 - description
- * @s2: - description
+ *
+ * @str:  description
  *
  * Return: Always 0 (Success)
  */
