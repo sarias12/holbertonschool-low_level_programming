@@ -16,11 +16,10 @@ char *create_array(unsigned int size, char c)
 
 	if (size == 0)
 		return (NULL);
-
 	vec = malloc(sizeof(char) * size);
+	if (vec == NULL)
+		return (NULL);
 	for (i = 0 ; i < size ; i++)
 		vec[i] = c;
 	return (vec);
-
-
 }
