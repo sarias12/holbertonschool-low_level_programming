@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "holberton.h"
 /**
- * malloc_pointer - Entry point
+ * malloc_checked - Entry point
  *
  * @b: - description
  *
