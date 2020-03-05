@@ -33,8 +33,8 @@ int **alloc_grid(int width, int height)
 			for (j = 0 ; j < i ; j++)
 			{
 				free(vec[i]);
-				return (NULL);
 			}
+			return (NULL);
 		}
 		for (j = 0 ; j < width ; j++)
 			vec[i][j] = 0;
