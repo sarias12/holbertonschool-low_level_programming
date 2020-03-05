@@ -15,10 +15,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i, j, k, m, size;
 	char *vec;
 
-	if (s1 == NULL)
-		s1 = "";
-	if (s == NULL)
-		s2 = "";
 	for (i = 0 ; s1[i] != '\0' ; i++)
 	{
 	}
@@ -39,11 +35,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		free(vec);
 		return (NULL);
 	}
-	for (j = 0 ; j < i ; j++)
+	for (j = 0 ; s1 && j < i ; j++)
 	{
 		vec[j] = s1[j];
 	}
-	for (k = 0 ; j < size ; j++)
+	for (k = 0 ; s2 && j < size ; j++)
 	{
 		vec[j] = s2[k];
 		k++;
