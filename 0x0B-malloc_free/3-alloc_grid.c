@@ -2,46 +2,37 @@
 #include <stdlib.h>
 #include "holberton.h"
 /**
- * *str_concat - Entry point
+ * *alloc_grid - Entry point
  *
- * @s1:  description
+ *@width:  description
  *
- * @s2:  description
+ *@height:  description
  *
  * Return: Always 0 (Success)
  */
 
 
-char *str_concat(char *s1, char *s2)
+int **alloc_grid(int width, int height)
 {
-	int i, j, k, m;
-	char *vec;
+	int i, j;
+	int **vec;
 
-	for (i = 0 ; s1[i] != '\0' ; i++)
-	{
-	}
-	for (j = 0 ; s2[j] != '\0' ; j++)
-	{
-	}
-	vec = malloc(sizeof(char) * (i + j + 1));
+	if (height <= 0 || width <= 0)
+		return (NULL);
+	vec = malloc(sizeof(int *) * height);
 	if (vec == NULL)
 		return (NULL);
-	if (s1 == NULL)
+	for (i = 0 ; i < height ; i++)
 	{
-		s1 = "";
+		vec[i] = malloc(sizeof(int) * width);
+		if (vec[i] == NULL)
+		{
+			for (j = 0 ; j < i ; j++)
+				free(vec[i]);
+			free(vec);
+		}
+		for (j = 0 ; j < width ; j++)
+			vec[i][j] = 0;
 	}
-	if (s2 == NULL)
-	{
-		s2 = "";
-	}
-	for (k = 0 ; k < i ; k++)
-		vec[k] = s1[k];
-	m = 0;
-	for (; k < i + j ; k++)
-	{
-		vec[k] = s2[m];
-		m++;
-	}
-	vec[k] = '\0';
 	return (vec);
 }
