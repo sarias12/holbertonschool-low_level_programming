@@ -15,10 +15,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i, j, k, m, size;
 	char *vec;
 
-	for (i = 0 ; s1[i] != '\0' ; i++)
+	for (i = 0 ; s1 && s1[i] != '\0' ; i++)
 	{
 	}
-	for (m = 0 ; s2[m] != '\0' ; m++)
+	for (m = 0 ; s2 && s2[m] != '\0' ; m++)
 	{
 	}
 	if (n >= m)
