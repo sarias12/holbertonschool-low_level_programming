@@ -21,7 +21,10 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	vec = malloc(sizeof(int *) * height);
 	if (vec == NULL)
+	{
+		free(vec);
 		return (NULL);
+	}
 	for (i = 0 ; i < height ; i++)
 	{
 		vec[i] = malloc(sizeof(int) * width);
@@ -29,7 +32,6 @@ int **alloc_grid(int width, int height)
 		{
 			for (j = 0 ; j < i ; j++)
 				free(vec[i]);
-			free(vec);
 		}
 		for (j = 0 ; j < width ; j++)
 			vec[i][j] = 0;
