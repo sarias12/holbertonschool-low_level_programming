@@ -1,6 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "dog.h"
+
+/**
+  * _strlen - function that returns the length of a string.
+  *
+  * @s: variable
+  * Return: length of string
+  */
+int _strlen(char *s)
+{
+	int x;
+
+	for (x = 0 ; s[x] != '\0' ; x++)
+	{
+	}
+	return (x);
+}
+
 /**
  * new_dog - Entry point
  *
@@ -14,17 +31,14 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	struct dog *secondog;
-	int i, j, l, k;
+	int l, k;
 
 	secondog = malloc(sizeof(dog_t));
 	if (secondog == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0 ; name[i] != '\0' ; i++)
-		;
-	i++;
-	secondog->name = malloc(sizeof(char) * i + 1);
+	secondog->name = malloc(_strlen(name) + 1);
 		if (secondog->name == NULL)
 		{
 			free(secondog);
@@ -33,10 +47,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	for (k = 0 ; name[k] != '\0' ; k++)
 		secondog->name[k] = name[k];
 	secondog->name[k] = '\0';
-	for (j = 0 ; owner[j] != '\0' ; j++)
-		;
-	j++;
-	secondog->owner = malloc(sizeof(char) * i + 1);
+	secondog->owner = malloc(_strlen(owner) + 1);
 		if (secondog->owner == NULL)
 		{
 			free(secondog->name);
