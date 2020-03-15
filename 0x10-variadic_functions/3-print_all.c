@@ -9,41 +9,41 @@
 void print_all(const char * const format, ...)
 {
 	va_list vlist;
-	int aux = 0, i = 0;
+	int i = 0, aux = 0;
 	char *s;
 
+	while (format == NULL)
+	{	printf("\n");
+		return;
+	}
 	va_start(vlist, format);
-
 	while (format[i] != '\0')
 	{	aux = 0;
 		switch (format[i])
 		{
 			case 'c':
 				printf("%c", (char)va_arg(vlist, int));
-				aux = 1;
 				break;
 			case 'i':
 				printf("%d", va_arg(vlist, int));
-				aux = 1;
 				break;
 			case 'f':
 				printf("%f", (float)va_arg(vlist, double));
-				aux = 1;
 				break;
 			case 's':
 				s = va_arg(vlist, char *);
 				if (s != NULL)
 				{	printf("%s", s);
-					aux = 1;
 					break;
 				}
 				printf("(nil)");
 				break;
 			default:
+				aux = 1;
 				break;
 		}
 		i++;
-		if (format[i] != '\0' && aux == 1)
+		if (format[i] != '\0' && aux == 0)
 			printf(", ");
 	}
 	va_end(vlist);
