@@ -5,6 +5,7 @@
  *
  * Return: nothing.
  */
+(void) __attribute__ ((constructor)) Myfunction(void)
 void Myfunction(void)
 {
 	printf("You're beat! and yet, you must allow,\n");
