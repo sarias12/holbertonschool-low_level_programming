@@ -13,13 +13,17 @@ int pop_listint(listint_t **head)
 	if (head != NULL)
 	{
 		aux = *head;
-		*head = aux->next;
-		n = aux->n;
-		free(aux);
-		return (n);
+		if (aux == NULL)
+		{
+			return (0);
+		}
+		else
+		{
+			*head = aux->next;
+			n = aux->n;
+			free(aux);
+			
+		}
 	}
-	else
-	{
-		return (0);
-	}
+	return (n);
 }
