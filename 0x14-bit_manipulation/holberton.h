@@ -6,5 +6,5 @@
 #include <stdio.h>
 #include "holberton.h"
 unsigned int binary_to_uint(const char *b);
-oid print_binary(unsigned long int n);
+void print_binary(unsigned long int n);
 #endif
