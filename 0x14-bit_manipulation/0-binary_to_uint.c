@@ -9,6 +9,8 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int rect, number = 0;
 	int index1, index2;
 
+	if (b == NULL)
+		return (0);
 	rect = 1;
 	for (index1 = 0 ; b[index1] != '\0' ; index1++)
 	{
@@ -27,9 +29,7 @@ unsigned int binary_to_uint(const char *b)
 			number = 0;
 		}
 		if (b[index1] == '0' && index2 != index1)
-		{
 			rect *= 2;
-		}
 		if (b[index1] == '1' && index2 == index1)
 		{
 			rect = 1;
