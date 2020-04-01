@@ -27,14 +27,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	sz = read(flow, text, letters);
-	if (sz < 0)
+	if (sz == -1)
 	{
 		close(flow);
 		free(text);
 		return (0);
 	}
-	dp = write(1, text, sz);
-	if (dp < 0 || sz != dp)
+	dp = write(STDOUT_FILENO, text, sz);
+	if (dp == -1 || sz != dp)
 	{
 		close(flow);
 		free(text);
