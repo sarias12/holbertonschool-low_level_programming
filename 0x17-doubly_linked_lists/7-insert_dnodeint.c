@@ -24,11 +24,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (add_dnodeint(h, n));
 	if (*h != NULL)
 	{
-		while (i < idx)
+		while (tmp_node)
 		{
+			if (idx == i)
+				break;
 			tmp_node = tmp_node->next;
-			if (tmp_node == NULL)
-				return (NULL);
 			i++;
 		}
 	}
