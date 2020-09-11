@@ -50,7 +50,7 @@ What you should learn from this project:
 
 
 ### [8. Double pointer, double fun](./9-set_string.c)
-* Write a function that sets the value of a pointer to a char.
+* Write a function that sets the value of a pointer to a char..
 
 ---
 
